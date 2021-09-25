@@ -109,5 +109,11 @@ this is the `init.lua` from the plugin
 
 if you can make this better, please submit `PR`s
 
-
 peace!
+
+## credits
+
+special thanks to:
+- [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
