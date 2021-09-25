@@ -3,10 +3,15 @@
 
 
 ## showcase
+
+module if statement:
 ![image 1](https://github.com/alexzanderr/nvim-treesitter-statusline/blob/master/images/ifstatement.png)
 
+class attribute inside init
 ![image 2](https://github.com/alexzanderr/nvim-treesitter-statusline/blob/master/images/class.png)
 
+
+for loop inside __init__ method
 ![image 2](https://github.com/alexzanderr/nvim-treesitter-statusline/blob/master/images/forclass.png)
 
 
