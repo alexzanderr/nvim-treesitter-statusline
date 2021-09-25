@@ -7,7 +7,7 @@ local Split = require("nui.split")
 function NvimTreeSitterStatusline()
     -- mount/open the component
 	local lines = vim.fn.winheight("%")
-	local columns = vin.fn.winwdith("%")
+	local columns = vim.fn.winwdith("%")
     local treesitter_statusline = Popup({
         enter = false,
         focusable = false,
