@@ -3,11 +3,11 @@
 
 
 ## showcase
-![image 1](https://github.com/alexzanderr/nvim-treesitter-statusline/images/ifstatement.png)
+![image 1](https://github.com/alexzanderr/nvim-treesitter-statusline/blob/master/images/ifstatement.png)
 
-![image 2](https://github.com/alexzanderr/nvim-treesitter-statusline/images/class.png)
+![image 2](https://github.com/alexzanderr/nvim-treesitter-statusline/blob/master/images/class.png)
 
-![image 2](https://github.com/alexzanderr/nvim-treesitter-statusline/images/forclass.png)
+![image 2](https://github.com/alexzanderr/nvim-treesitter-statusline/blob/master/images/forclass.png)
 
 
 ## install using packer
