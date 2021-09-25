@@ -6,24 +6,32 @@ local Split = require("nui.split")
 
 function NvimTreeSitterStatusline()
     -- mount/open the component
+	local lines = vim.fn.winheight("%")
+	local columns = vin.fn.winwdith("%")
     local treesitter_statusline = Popup({
         enter = false,
         focusable = false,
         relative = "editor",
         border = {},
         position = {
-            row = 38,
+            row = lines,
             col = 0,
         },
         -- zindex = 50,
         size = {
-            width = 100,
+            width = columns,
             height = 1,
         },
         buf_options = {
             modifiable = true,
             readonly = false,
         },
+		-- transparency
+        win_options = {
+            winblend = 100,
+            winhighlight = "Normal:Normal",
+        },
+
     })
     treesitter_statusline:mount()
     local lsp_status = require("nvim-treesitter").statusline({
