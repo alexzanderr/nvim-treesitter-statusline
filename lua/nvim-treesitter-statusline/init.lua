@@ -73,5 +73,5 @@ vim.g.scrolloff = 1
 vim.cmd("autocmd CursorHold * lua NvimTreeSitterStatusline()")
 vim.cmd("autocmd CursorHoldI * lua NvimTreeSitterStatusline()")
 vim.cmd("autocmd BufWrite * lua NvimTreeSitterStatusline()")
-vim.cmd("autocmd BufEnter * lua NvimTreeSitterStatusline()")
+-- vim.cmd("autocmd BufEnter * lua NvimTreeSitterStatusline()")
 
