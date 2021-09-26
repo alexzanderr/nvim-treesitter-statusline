@@ -1,5 +1,6 @@
 
 
+
 local Popup = require("nui.popup")
 local event = require("nui.utils.autocmd").event
 local Split = require("nui.split")
@@ -7,7 +8,7 @@ local Split = require("nui.split")
 function NvimTreeSitterStatusline()
     -- mount/open the component
 	local lines = vim.fn.winheight("%")
-	local columns = vim.fn.winwdith("%")
+	local columns = vim.fn.winwidth("%")
     local treesitter_statusline = Popup({
         enter = false,
         focusable = false,
@@ -34,6 +35,12 @@ function NvimTreeSitterStatusline()
 
     })
     treesitter_statusline:mount()
+
+	treesitter_statusline:on(event.VimResized, function()
+		treesitter_statusline:unmount()
+	end)
+
+
     local lsp_status = require("nvim-treesitter").statusline({
         indicator_size = 100,
         separator = " ❱ ",
@@ -56,6 +63,7 @@ function NvimTreeSitterStatusline()
     vim.api.nvim_buf_set_lines(treesitter_statusline.bufnr, 0, 1, false, {
         lsp_status,
     })
+-- treesitter_statusline:unmount()
 end
 
 
@@ -66,3 +74,4 @@ vim.cmd("autocmd CursorHold * lua NvimTreeSitterStatusline()")
 vim.cmd("autocmd CursorHoldI * lua NvimTreeSitterStatusline()")
 vim.cmd("autocmd BufWrite * lua NvimTreeSitterStatusline()")
 vim.cmd("autocmd BufEnter * lua NvimTreeSitterStatusline()")
+
